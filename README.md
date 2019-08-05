@@ -69,7 +69,7 @@ SQLAlchemy errors, automatic sign out has a short time span
     - Postgresql
 
 ## Support and contact details
-Contact me on developer.waweru@gmail.com for any comments, reviews or advice.
+Contact me on wilsonowino1@gmail.com for any comments, reviews or advice.
 
 ### License
 Copyright (c) **Wilson Owino**
