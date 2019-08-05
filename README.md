@@ -13,7 +13,6 @@ Is a web application is meant for users to post pitches on any of the 7 differen
     5. Academic
     6. Political
     7. Technology
-    8. Health
 
 A user can select any of the categories from the navbar to view the pitches on these categories
 
