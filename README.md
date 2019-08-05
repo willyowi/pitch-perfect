@@ -1,4 +1,4 @@
-#PITCH PERFECT
+# PITCH PERFECT
 ## Pitch Perfect is a web application that is meant for users to add pitches on 7 different categories
 ### Aug 5th, 2019
 #### 
