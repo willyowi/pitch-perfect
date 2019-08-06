@@ -9,27 +9,27 @@
             </button>
             <a class="navbar-brand" href="app/static/images/bestpitch.png">  </a>
         </div> -->
-        <div class="nav navbar-nav navbar-right" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="nav navbar-nav navbar-left"  style="margin-top: 30px; margin-bottom: 30px;">
             <ul class="nav nav-pills nav-fill">
                 <!-- <li>
                     <h1 style = "margin-right: 850px; color: green; font-size: 30px; font-weight: bold;" >-Pitch It!-</h1>
                 </li> -->
                 <li class="nav-item" >
-                    <a class="btn btn-success" style = "margin-right: 20px;" href="/">Home</a>
+                    <a class="btn btn-dark" height="100" width="200" style = "margin-right: x;" href="/">Home page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-success" style = "margin-right: 20px;" href="/timeline">Timeline</a>
+                    <a class="btn btn-dark" height="50px" width="200px" style = "margin-right: px;" href="/timeline">Your timeline</a>
                     <!-- <a class="nav-link" href="timeline">Timeline</a> -->
                 </li>
                 {% if current_user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="btn btn-success" style = "margin-right: 20px;" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a>
+                    <a class="btn btn-secondary" style = "margin-right: x;" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a>
                 </li>
                 <li>
-                    <a class="btn btn-success" style = "margin-right: 20px;" href="{{url_for('auth.logout')}}">Sign out</a>
+                    <a class="btn btn-secondary" style = "margin-right: x;" href="{{url_for('auth.logout')}}">Sign out</a>
                 </li>
                 {% else %}
-                <li><a class="btn btn-success" style = "margin-right: 20px;" href="{{url_for('auth.login')}}">Sign in</a></li>
+                <li><a class="btn btn-dark" style = "margin-right: x;" href="{{url_for('auth.login')}}">Login</a></li>
                 {%endif%}
             </ul>
         </div>

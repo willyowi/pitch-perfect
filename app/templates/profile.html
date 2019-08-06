@@ -7,14 +7,14 @@
 
 <!-- <div style=" background-image: url('https://www.limitlesswalls.com/media/catalog/product/2/4/240_F_106780106_BvY7hixLGKuOBYFYaTwGYGtgDAu2wOzx.1538366744.jpg');background-attachment: fixed;background-repeat: no-repeat; background-size: cover; overflow: hidden;"> -->
 
-<div class="wrapper-view"   >
-    <div class="container-fluid">
-        <div class="row">
+<div class="wrapper-view" style="background-color: blue">
+    <div class="container-fluid" style="background-color: blue" >
+        <div class="row" style="background-color: rgb(230, 230, 240)">
             <div class="col-md-4" style="margin: 5%; margin-left: 10%;" >
                 {% if user.profile_pic_path %}
                     <img src="{{url_for('static',filename=user.profile_pic_path)}}" style="padding: 20px;"alt="" class="img-thumbnail" id="profpic">
                 {%else%}
-                    <i class="fa fa-camera" style="text-align:center;color:rgb(138, 126, 126);padding-top:8%;" id="profpic"></i>
+                    <i class="fal fa-camera" style="text-align:center;color:rgb(24, 21, 21);padding-top:8%;" id="profpic"></i>
                 {% endif %}
             </div>
         </div>
@@ -37,7 +37,7 @@
             </div>
     </div>
     <br> <br> <br> <br> <br>
-    <div class="row" id="mainprofile" style = "margin-left: 10%">
+    <div class="row" id="mainprofile" style = "margin-left: 10%"  >
             <div class="col-md-2" id="bio">
                 {% if user %}
                     <p>@{{user.username}}</p>

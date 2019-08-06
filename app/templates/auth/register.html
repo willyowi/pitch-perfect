@@ -1,3 +1,4 @@
+<div style="background-color: black" >
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
@@ -9,18 +10,19 @@
 
 {% block content %}
 
-<div class="wrapper-view" id="secondpage">
+<div class="wrapper-view" id="secondpage"  >
         <div class="container">
-                <div class="row">
+                <div class="row" style="background-color: grey" >
                 <div class="col-md-2"> </div>
                 <div class="col-md-8">
                 
                 {{wtf.quick_form(registration_form)}}
                 
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><h3>Make your password easy to remember &#129296 </h3></div>
                 </div>
                 </div>
 </div>
 
 {% endblock%}
+</div>

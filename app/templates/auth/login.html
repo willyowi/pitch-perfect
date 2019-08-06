@@ -4,25 +4,32 @@
     {% include 'navbar.html' %}
 {% endblock%}
 {% block content %}
+<!DOCTYPE html>
+<html>
+<head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<div class="wrapper-view" >
+</head>
+<body style="background-color: black">
+<div class="wrapper-view" style="background-color: black" >
   
-    <div class="row">
+    <div class="row" style="background-color: grey">
       <div class= "col-md-2"> </div>
-      <div class="col-md-8">
+      <div class="col-md-5">
       <!--Flash message -->
       {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger">
+        <div class="alert alert-warning">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{ message }}
         </div>
       {% endfor %}
       <!-- Login form -->
       {{wtf.quick_form(login_form)}}
-      <p> Don't have an account? <a href="{{url_for('auth.register')}}">Register account here</a></p>
+      <p> Don't have an account? <a style=color:red; href="{{url_for('auth.register')}}">Register account here</a></p>
      </div>
-     <div clas="col-md-2"> </div>
+     <div clas="col-md-5">  </div>
     </div>
 </div>
+</body>
+</html>
 {% endblock %}
