@@ -1,10 +1,10 @@
-# Pitch Blog
+# Pitch Perfect
 
 ## Description
 This is  an application that allows users to submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
 
 ## Link to deployed site
-https://newshighlists.herokuapp.com/ 
+ 
 
 ## user stories
 * view pitches
@@ -28,8 +28,8 @@ https://newshighlists.herokuapp.com/
 
 ## Setup/Installation Requirements
 * Internet access
-* git clone https://github.com/RisperAkinyi/PitchBlog
-* $ cd into PitchBlog
+* git clone
+* $ cd into Pitch_perfect
 * $ python3.6 -m venv virtual (install virtual environment)
 * $ source virtual/bin/activate
 * $ python3.6 -m pip install -r requirements.txt (install all dependencies)
@@ -44,7 +44,7 @@ https://newshighlists.herokuapp.com/
 * JavaScript
 
 ## Further help
-Contact me at risperakinyi3@gmail.com if you run into any issue or have any questions
+Contact me at wilsonowino1@gmail.com if you run into any issue or have any questions
 
 ### License
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,7 +65,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) 2019 Risper Akinyi
+Copyright (c) wilson owino
 
 
 
