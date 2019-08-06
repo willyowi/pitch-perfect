@@ -1,75 +1,72 @@
-# PITCH PERFECT
-## Pitch Perfect is a web application that is meant for users to add pitches on 7 different categories
-### Aug 5th, 2019
-#### 
+# Pitch Blog
 
 ## Description
-Is a web application is meant for users to post pitches on any of the 7 different categories. These categories are:
+This is  an application that allows users to submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
 
-    1. Interview Pitch
-    2. Product Pitch
-    3. Promotion Pitch
-    4. Business
-    5. Academic
-    6. Political
-    7. Technology
+## Link to deployed site
+https://newshighlists.herokuapp.com/ 
 
-A user can select any of the categories from the navbar to view the pitches on these categories
+## user stories
+* view pitches
+* login
+* pitch
+* downvote and upvote
+* view personal pitches on profile
+* comment on pitches
 
-Other users can give feedback to the pitch posts by commenting, liking or disliking the pitch. 
+## BDD
+| Behavior           | Input                 | Outcome                            |
+| -------------------|-----------------------| -----------------------------------|
+| request page       | click horuku link url | view othr pitches  & vote          |
+| click on a pitch   |                       | vote/comment                       |
+| sign in/up         | details pass & user   | view,pitch & comment               |
 
+#### Prerequisites
+1. Python 3.6
+2. Pip
+3. virtualenv
 
+## Setup/Installation Requirements
+* Internet access
+* git clone https://github.com/RisperAkinyi/PitchBlog
+* $ cd into PitchBlog
+* $ python3.6 -m venv virtual (install virtual environment)
+* $ source virtual/bin/activate
+* $ python3.6 -m pip install -r requirements.txt (install all dependencies)
+* Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = * create_app('production') should be app = create_app('development')
+* $ ./start.sh
+* Open [localhost:5000](http://127.0.0.1:5000/)
 
-## Set-up and Installation
+## Technologies Used
+* Python 3.6.5
+* Flask Framework
+* HTML/CSS
+* JavaScript
 
-### Prerequiites
-    - Python 3.6
-    - Ubuntu software
-
-Install [Postgres](https://www.postgresql.org/download/)
-
-### Create a Virtual Environment
-Run the following commands in the same terminal:
-`sudo apt-get install python3.6-venv`
-`python3.6 -m venv virtual`
-`source virtual/bin/activate`
-
-### Install dependancies
-Install dependancies that will create an environment for the app to run
-`pip3 install -r requirements`
-
-### Prepare environment variables
-```bash
-export DATABASE_URL='postgresql+psycopg2://username:password@localhost/pitchez'
-export SECRET_KEY='Your secret key'
-```
-
-### Run Database Migrations
-```
-python manage.py db init
-python manage.py db migrate -m "initial migration"
-python manage.py db upgrade
-```
-
-### Running the app in development
-In the same terminal type:
-`python3 manage.py server`
-
-Open the browser on `http://localhost:5000/`
-
-## Known bugs
-SQLAlchemy errors, automatic sign out has a short time span
-
-## Technologies used
-    - Python 3.6
-    - HTML
-    - Bootstrap 4
-    - JavaScript
-    - Heroku
-    - Postgresql
-
-## Support and contact details
-Contact me on wilsonowino1@gmail.com for any comments, reviews or advice.
+## Further help
+Contact me at risperakinyi3@gmail.com if you run into any issue or have any questions
 
 ### License
-Copyright (c) **Wilson Owino**
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files, to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Copyright (c) 2019 Risper Akinyi
+
+
+
+

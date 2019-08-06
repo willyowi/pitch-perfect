@@ -1,35 +1,30 @@
 import unittest
-from app.models import Pitch, User
-from flask_login import current_user
+from app.models import Comment, User, Pitch
 from app import db
 
-class TestPitch(unittest.TestCase):
 
+class PitchModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_joe = User(username='joe',password='password',email='abc@defg.com')
-        self.new_pitch = Pitch(pitch_content = "This is my pitch", pitch_category='Business',user=self.user_joe)
-    
+        self.user_risper = User(
+            username='risper', password='potato', email='risper@ms.com')
+        self.new_pitch = Pitch(id=1, pitch_title='Test', pitch_content='This is a test pitch',
+                               category="interview", user=self.user_risper)
+
     def tearDown(self):
         Pitch.query.delete()
         User.query.delete()
-        # my_user = db.session.query(User).filter(self.user.id==1).first()
-        # db.session.delete(my_user)
-
-    def test_instance(self):
-        self.assertTrue(isinstance(self.new_pitch,Pitch))
-
 
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_pitch.pitch_content,"This is my pitch")
-        self.assertEquals(self.new_pitch.pitch_category,'Business')
-        self.assertEquals(self.new_pitch.user,self.user_joe)
+        self.assertEquals(self.new_pitch.pitch_title, 'Test')
+        self.assertEquals(self.new_pitch.pitch_content, 'This is a test pitch')
+        self.assertEquals(self.new_pitch.category, "interview")
+        self.assertEquals(self.new_pitch.user, self.user_risper)
 
+    def test_save_pitch(self):
+        self.new_pitch.save_pitch()
+        self.assertTrue(len(Pitch.query.all()) > 0)
 
-    # def test_save_pitch(self):
-    #     self.new_pitch.save_pitch()
-    #     self.assertTrue(len(Pitch.query.all())>0)
-
-    # def test_get_all_pitches(self):
-    #     self.new_pitch.save_pitch()
-    #     get_pitches = Pitch.get_all_pitches()
-    #     self.assertTrue(len(get_pitches)==1)
+    def test_get_pitch_by_id(self):
+        self.new_pitch.save_pitch()
+        got_pitch = Pitch.get_pitch(1)
+        self.assertTrue(got_pitch is not None)

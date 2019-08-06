@@ -1,26 +1,18 @@
 import unittest
-from app.models import Pitch, User, Comment
-from flask_login import current_user
 from app import db
+from app.models import Comment, User, Pitch
 
-class TestPitch(unittest.TestCase):
-
+class CommentModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_joe = User(username='joe',password='password',email='abc@defg.com')
-        self.new_pitch = Pitch(pitch_content = "This is my pitch", pitch_category='Business',user=self.user_joe)
-        self.new_comment = Comment(comment_content = "This is my comment", pitch=self.new_pitch, user=self.user_joe)
-    
+        self.user_risper = User(username = 'risper', password = 'potato', email = 'risper@ms.com')
+        self.new_pitch = Pitch(id = 1, pitch_title = 'Test', pitch_content = 'This is a test pitch', category = 'interview', user = self.user_risper)
+        self.new_comment = Comment(id = 1, comment = 'Test comment', user = self.user_risper, pitch_id = self.new_pitch)
+        
     def tearDown(self):
-        db.session.delete(self)
-        User.query.commit()
-        # my_user = db.session.query(User).filter(self.user.id==1).first()
-        # db.session.delete(my_user)
-
-    def test_instance(self):
-        self.assertTrue(isinstance(self.new_comment,Comment))
-
-
+        Pitch.query.delete()
+        User.query.delete()
+    
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_comment.comment_content,"This is my comment")
-        self.assertEquals(self.new_comment.pitch,self.new_pitch)
-        self.assertEquals(self.new_comment.user,self.user_joe)
+        self.assertEquals(self.new_comment.comment,'Test comment')
+        self.assertEquals(self.new_comment.user,self.user_risper)
+        self.assertEquals(self.new_comment.pitch_id,self.new_pitch)

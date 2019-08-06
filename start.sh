@@ -1,5 +1,3 @@
 export SECRET_KEY='wise'
-export MAIL_USERNAME='wilsonowino1@gmail.com'
-export MAIL_PASSWORD='castrowonka522'
-
+SQLALCHEMY_DATABASE_URI='DATABASE_URL'
 python3.6 manage.py server
