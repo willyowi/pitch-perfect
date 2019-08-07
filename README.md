@@ -21,6 +21,20 @@ This is  an application that allows users to submit their one minute pitches and
 | click on a pitch   |                       | vote/comment                       |
 | sign in/up         | details pass & user   | view,pitch & comment               |
 
+# Landing page
+Welcomes you to the page
+![screenshot](app/static/images/whatif.png)
+
+# loging in
+When you have an account you log in and when you dont you sign
+![screenshot](app/static/images/login.png)
+
+# on your timeline
+![screenshot](app/static/images/time.png)
+
+
+
+
 #### Prerequisites
 1. Python 3.6
 2. Pip
